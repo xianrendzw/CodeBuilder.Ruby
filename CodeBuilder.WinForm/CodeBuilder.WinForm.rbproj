@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26777B2C-FD5D-405E-BD34-F0B3A42AF9BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeBuilder.WinForm</RootNamespace>
+    <AssemblyName>CodeBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <MainFile>Program.rb</MainFile>
+    <StartArguments>--disable-gems -D Program.rb</StartArguments>
+    <StartWorkingDirectory>.\</StartWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Images\App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CodeBuilder.WinForm.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files %28x86%29\SharpDevelop\4.1\AddIns\BackendBindings\RubyBinding\ir.exe</StartProgram>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IronRuby">
+      <HintPath>C:\Program Files %28x86%29\SharpDevelop\4.1\AddIns\BackendBindings\RubyBinding\IronRuby.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.Designer.rb">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.rb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.rb" />
+    <Compile Include="Properties\AssemblyInfo.rb" />
+    <Compile Include="Properties\Resources.Designer.rb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.rb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\AppContainer.rb" />
+    <Compile Include="UI\Components\CodeGeneration.Designer.rb">
+      <DependentUpon>CodeGeneration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Components\CodeGeneration.rb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Components\GenerationCompletedEventHandler.rb" />
+    <Compile Include="UI\Components\GenerationParameter.rb" />
+    <Compile Include="UI\Components\GenerationProgressChangedEventHandler.rb" />
+    <Compile Include="UI\Forms\AboutBox.Designer.rb">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\AboutBox.rb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseOptionsDialog.Designer.rb">
+      <DependentUpon>BaseOptionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseOptionsDialog.rb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\BaseOptionsPage.Designer.rb">
+      <DependentUpon>BaseOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\BaseOptionsPage.rb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.Designer.rb">
+      <DependentUpon>CodeGeneralOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.rb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\DataSourceOptionsPage.Designer.rb">
+      <DependentUpon>DataSourceOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\DataSourceOptionsPage.rb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.Designer.rb">
+      <DependentUpon>RecentFilesOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.rb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\TemplateOptionsPage.Designer.rb">
+      <DependentUpon>TemplateOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\TemplateOptionsPage.rb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\TraceOptionsPage.Designer.rb">
+      <DependentUpon>TraceOptionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\OptionsPages\TraceOptionsPage.rb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\TreeOptionsDialog.Designer.rb">
+      <DependentUpon>TreeOptionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\TreeOptionsDialog.rb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Helpers\ExportModelHelper.rb" />
+    <Compile Include="UI\Helpers\GenerationHelper.rb" />
+    <Compile Include="UI\Helpers\MessageBoxHelper.rb" />
+    <Compile Include="UI\ModelManager.rb" />
+    <Compile Include="UI\OptionsDialog.rb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseOptionsDialog.resx">
+      <DependentUpon>BaseOptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\BaseOptionsPage.resx">
+      <DependentUpon>BaseOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.resx">
+      <DependentUpon>CodeGeneralOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\DataSourceOptionsPage.resx">
+      <DependentUpon>DataSourceOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.resx">
+      <DependentUpon>RecentFilesOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\TemplateOptionsPage.resx">
+      <DependentUpon>TemplateOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\OptionsPages\TraceOptionsPage.resx">
+      <DependentUpon>TraceOptionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\TreeOptionsDialog.resx">
+      <DependentUpon>TreeOptionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\App.ico" />
+    <Content Include="Resources\Images\cb.bmp" />
+    <Content Include="Resources\Images\folderClosed.gif" />
+    <Content Include="Resources\Images\folderOpen.gif" />
+    <Content Include="Resources\Images\leaf.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ConfigFile Include="Config\DataSources.xml" />
+    <ConfigFile Include="Config\Options.xml" />
+    <ConfigFile Include="Config\Settings.xml" />
+    <ConfigFile Include="Config\Templates.xml" />
+    <ConfigFile Include="Config\TypeMapping.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Templates Include="Templates\csharp\Ader\LightFramework-DTO.adr" />
+    <Templates Include="Templates\csharp\NVelocity\LightFramework-DTO.nv" />
+    <Templates Include="Templates\csharp\Razor\LightFramework-DTO.raz" />
+    <Templates Include="Templates\csharp\Vici\LightFramework-DTO.vic" />
+    <Templates Include="Templates\java\NVelocity\LightFramework-DTO.nv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeBuilder.Framework\CodeBuilder.Framework.csproj">
+      <Project>{1FDA5B2E-BD7D-4BB1-9579-C25130156A43}</Project>
+      <Name>CodeBuilder.Framework</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Target Name="Build" />
+</Project>

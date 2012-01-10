@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{173D9AFF-77A2-4630-8ABA-3748FA189EAE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeBuilder.Framework</RootNamespace>
+    <AssemblyName>CodeBuilder.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IronRuby">
+      <HintPath>C:\Program Files %28x86%29\SharpDevelop\4.1\AddIns\BackendBindings\RubyBinding\IronRuby.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="mscorlib" />
+    <Reference Include="mysql.data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\ADO.NET\mysql\v4\mysql.data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NVelocity">
+      <HintPath>..\lib\TemplateEngines\NVelocity-1.1.1\net40\NVelocity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorEngine">
+      <HintPath>..\lib\TemplateEngines\Razor2.1\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\TemplateEngines\Razor2.1\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TemplateEngine">
+      <HintPath>..\lib\TemplateEngines\AderV2\TemplateEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Vici.Core">
+      <HintPath>..\lib\TemplateEngines\Vici.Engine.1.0.0\Vici.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\ConfigManager.rb" />
+    <Compile Include="Configuration\DataSource\DataSourceElement.rb" />
+    <Compile Include="Configuration\DataSource\DataSourceElementCollection.rb" />
+    <Compile Include="Configuration\DataSource\DataSourceSection.rb" />
+    <Compile Include="Configuration\Generation\GenerationSettings.rb" />
+    <Compile Include="Configuration\Options\OptionElement.rb" />
+    <Compile Include="Configuration\Options\OptionElementCollection.rb" />
+    <Compile Include="Configuration\Options\OptionSection.rb" />
+    <Compile Include="Configuration\Settings\AppSettingsElement.rb" />
+    <Compile Include="Configuration\Settings\AppSettingsElementCollection.rb" />
+    <Compile Include="Configuration\Settings\DatabaseElement.rb" />
+    <Compile Include="Configuration\Settings\DatabaseElementCollection.rb" />
+    <Compile Include="Configuration\Settings\ExporterElement.rb" />
+    <Compile Include="Configuration\Settings\ExporterElementCollection.rb" />
+    <Compile Include="Configuration\Settings\LanguageElement.rb" />
+    <Compile Include="Configuration\Settings\LanguageElementCollection.rb" />
+    <Compile Include="Configuration\Settings\PdmDatabaseElement.rb" />
+    <Compile Include="Configuration\Settings\PdmDatabaseElementCollection.rb" />
+    <Compile Include="Configuration\Settings\SettingsSection.rb" />
+    <Compile Include="Configuration\Settings\TemplateEngineElement.rb" />
+    <Compile Include="Configuration\Settings\TemplateEngineElementCollection.rb" />
+    <Compile Include="Configuration\Template\TemplateElement.rb" />
+    <Compile Include="Configuration\Template\TemplateElementCollection.rb" />
+    <Compile Include="Configuration\Template\TemplateSection.rb" />
+    <Compile Include="Configuration\TypeMapping\TypeElement.rb" />
+    <Compile Include="Configuration\TypeMapping\TypeElementCollection.rb" />
+    <Compile Include="Configuration\TypeMapping\TypeMappingElement.rb" />
+    <Compile Include="Configuration\TypeMapping\TypeMappingElementCollection.rb" />
+    <Compile Include="Configuration\TypeMapping\TypeMappingSection.rb" />
+    <Compile Include="Exceptions\NotFoundPdmDBMSException.rb" />
+    <Compile Include="Exceptions\NotSupportDatabaseException.rb" />
+    <Compile Include="Exporter\BaseExporter.rb" />
+    <Compile Include="Exporter\IExporter.rb" />
+    <Compile Include="Exporter\MySQL\MySql5Exporter.rb" />
+    <Compile Include="Exporter\Oracle\Oracle8iExporter.rb" />
+    <Compile Include="Exporter\PowerDesigner\PowerDesigner12Exporter.rb" />
+    <Compile Include="Exporter\SQLServer\SqlServer2000Exporter.rb" />
+    <Compile Include="Exporter\SQLServer\SqlServer2005Exporter.rb" />
+    <Compile Include="Exporter\SQLServer\SqlServer2008Exporter.rb" />
+    <Compile Include="PhysicalDataModel\BaseTable.rb" />
+    <Compile Include="PhysicalDataModel\Column.rb" />
+    <Compile Include="PhysicalDataModel\Columns.rb" />
+    <Compile Include="PhysicalDataModel\IMetaData.rb" />
+    <Compile Include="PhysicalDataModel\Model.rb" />
+    <Compile Include="PhysicalDataModel\Table.rb" />
+    <Compile Include="PhysicalDataModel\Tables.rb" />
+    <Compile Include="PhysicalDataModel\View.rb" />
+    <Compile Include="PhysicalDataModel\Views.rb" />
+    <Compile Include="Properties\AssemblyInfo.rb" />
+    <Compile Include="TemplateEngine\Adapters\AderEngineAdapter.rb" />
+    <Compile Include="TemplateEngine\Adapters\NVelocityEngineAdapter.rb" />
+    <Compile Include="TemplateEngine\Adapters\RazorEngineAdapter.rb" />
+    <Compile Include="TemplateEngine\Adapters\ViciEngineAdapter.rb" />
+    <Compile Include="TemplateEngine\ITemplateEngine.rb" />
+    <Compile Include="TemplateEngine\TemplateData.rb" />
+    <Compile Include="TemplateEngine\TemplateDataBuilder.rb" />
+    <Compile Include="TypeMapping\DefaultTypeMapper.rb" />
+    <Compile Include="TypeMapping\ITypeMapper.rb" />
+    <Compile Include="TypeMapping\LanguageType.rb" />
+    <Compile Include="TypeMapping\TypeMapperFactory.rb" />
+    <Compile Include="Util\AssemblyHelper.rb" />
+    <Compile Include="Util\ConvertHelper.rb" />
+    <Compile Include="Util\Logging\InternalTrace.rb" />
+    <Compile Include="Util\Logging\InternalTraceWriter.rb" />
+    <Compile Include="Util\Logging\Logger.rb" />
+    <Compile Include="Util\PathHelper.rb" />
+    <Compile Include="Util\SerializeHelper.rb" />
+    <Compile Include="Util\StringExtension.rb" />
+  </ItemGroup>
+  <Target Name="Build" />
+</Project>
