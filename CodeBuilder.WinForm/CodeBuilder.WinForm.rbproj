@@ -31,6 +31,9 @@
     <MainFile>Program.rb</MainFile>
     <StartArguments>--disable-gems -D Program.rb</StartArguments>
     <StartWorkingDirectory>.\</StartWorkingDirectory>
+    <StartupFile>Program.rb</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <IsWindowsApplication>True</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -212,10 +215,92 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="App.config" />
+    <None Include="Config\DataSources.xml" />
+    <None Include="Config\Options.xml" />
+    <None Include="Config\Settings.xml" />
+    <None Include="Config\Templates.xml" />
+    <None Include="Config\TypeMapping.xml" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\bin" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\bin\Debug" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Config" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Properties" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Resources" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Resources\Images" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Templates" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Templates\csharp" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Templates\csharp\Ader" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Templates\csharp\NVelocity" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Templates\csharp\Razor" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Templates\csharp\Vici" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Templates\java" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\Templates\java\NVelocity" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\UI" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\UI\Components" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\UI\Forms" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\UI\Forms\OptionsPages" />
+    <None Include="F:\project\my\ruby\CodeBuilder.Ruby\CodeBuilder.WinForm\UI\Helpers" />
+    <None Include="MainForm.Designer.rb" />
+    <None Include="MainForm.rb" />
+    <None Include="MainForm.resx" />
+    <None Include="Program.rb" />
+    <None Include="Properties\AssemblyInfo.rb" />
+    <None Include="Properties\Resources.Designer.rb" />
+    <None Include="Properties\Resources.resx" />
+    <None Include="Properties\Settings.Designer.rb" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Properties\Settings.settings" />
+    <None Include="Resources\Images\App.ico" />
+    <None Include="Resources\Images\cb.bmp" />
+    <None Include="Resources\Images\folderClosed.gif" />
+    <None Include="Resources\Images\folderOpen.gif" />
+    <None Include="Resources\Images\leaf.gif" />
+    <None Include="Templates\csharp\Ader\LightFramework-DTO.adr" />
+    <None Include="Templates\csharp\NVelocity\LightFramework-DTO.nv" />
+    <None Include="Templates\csharp\Razor\LightFramework-DTO.raz" />
+    <None Include="Templates\csharp\Vici\LightFramework-DTO.vic" />
+    <None Include="Templates\java\NVelocity\LightFramework-DTO.nv" />
+    <None Include="UI\AppContainer.rb" />
+    <None Include="UI\Components\CodeGeneration.Designer.rb" />
+    <None Include="UI\Components\CodeGeneration.rb" />
+    <None Include="UI\Components\GenerationCompletedEventHandler.rb" />
+    <None Include="UI\Components\GenerationParameter.rb" />
+    <None Include="UI\Components\GenerationProgressChangedEventHandler.rb" />
+    <None Include="UI\Forms\AboutBox.Designer.rb" />
+    <None Include="UI\Forms\AboutBox.rb" />
+    <None Include="UI\Forms\AboutBox.resx" />
+    <None Include="UI\Forms\BaseOptionsDialog.Designer.rb" />
+    <None Include="UI\Forms\BaseOptionsDialog.rb" />
+    <None Include="UI\Forms\BaseOptionsDialog.resx" />
+    <None Include="UI\Forms\BaseOptionsPage.Designer.rb" />
+    <None Include="UI\Forms\BaseOptionsPage.rb" />
+    <None Include="UI\Forms\BaseOptionsPage.resx" />
+    <None Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.Designer.rb" />
+    <None Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.rb" />
+    <None Include="UI\Forms\OptionsPages\CodeGeneralOptionsPage.resx" />
+    <None Include="UI\Forms\OptionsPages\DataSourceOptionsPage.Designer.rb" />
+    <None Include="UI\Forms\OptionsPages\DataSourceOptionsPage.rb" />
+    <None Include="UI\Forms\OptionsPages\DataSourceOptionsPage.resx" />
+    <None Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.Designer.rb" />
+    <None Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.rb" />
+    <None Include="UI\Forms\OptionsPages\RecentFilesOptionsPage.resx" />
+    <None Include="UI\Forms\OptionsPages\TemplateOptionsPage.Designer.rb" />
+    <None Include="UI\Forms\OptionsPages\TemplateOptionsPage.rb" />
+    <None Include="UI\Forms\OptionsPages\TemplateOptionsPage.resx" />
+    <None Include="UI\Forms\OptionsPages\TraceOptionsPage.Designer.rb" />
+    <None Include="UI\Forms\OptionsPages\TraceOptionsPage.rb" />
+    <None Include="UI\Forms\OptionsPages\TraceOptionsPage.resx" />
+    <None Include="UI\Forms\TreeOptionsDialog.Designer.rb" />
+    <None Include="UI\Forms\TreeOptionsDialog.rb" />
+    <None Include="UI\Forms\TreeOptionsDialog.resx" />
+    <None Include="UI\Helpers\ExportModelHelper.rb" />
+    <None Include="UI\Helpers\GenerationHelper.rb" />
+    <None Include="UI\Helpers\MessageBoxHelper.rb" />
+    <None Include="UI\ModelManager.rb" />
+    <None Include="UI\OptionsDialog.rb" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\App.ico" />

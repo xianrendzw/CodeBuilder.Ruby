@@ -5,7 +5,8 @@ require "System.Runtime.InteropServices, Version=2.0.0.0, Culture=neutral, Publi
 # General Information about an assembly is controlled through the following 
 # set of attributes. Change these attribute values to modify the information
 # associated with an assembly.
-"CodeBuilder.Framework""CodeBuilder Framework Componets""""www.dengzhiwei.com""CodeBuilder.WinForm""Copyright © Tom Deng 2011-2012"""""# Setting ComVisible to false makes the types in this assembly not visible 
+"CodeBuilder.Framework""CodeBuilder Framework Componets""""www.dengzhiwei.com""CodeBuilder.WinForm""Copyright © Tom Deng 2011-2012"""""
+# Setting ComVisible to false makes the types in this assembly not visible 
 # to COM components.  If you need to access a dbType in this assembly from 
 # COM, set the ComVisible attribute to true on that dbType.
 false# The following GUID is for the ID of the typelib if this project is exposed to COM
